@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <title>Test RP</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      /* Color de fondo */
+    }
+
+    .colorFoter{
+      background-color: #0056b3;
+      color: black;
+    }
+    .container {
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .container form {
+      background-color: #ffffff;
+      /* Fondo del formulario */
+      border-radius: 10px;
+      /* Bordes redondeados */
+      padding: 20px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .container h3 {
+      font-size: 24px;
+      /* Tamaño de fuente del título */
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      font-weight: bold;
+      /* Texto de etiqueta en negrita */
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      /* Color de botón */
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      /* Color de botón al pasar el cursor */
+    }
+
+    .custom-select {
+      width: 300px;
+      /* Ajusta el ancho deseado */
+    }
+
+    .navColor{
+      background-color: #007bff;
+      font-family: 'Times New Roman', Times, serif;
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-light navColor text-center">
+    <div class="container-fluid text-center">
+      <span class="navbar-text text-center">
+       <h3 class="text-center">Encuesta de Personalidad y Preferencias Personales</h3> 
+      </span>
+    </div>
+  </nav>
+  <div class="container">
+    <h3 class="text-center">Responde cuidadosamente las siguientes preguntas.</h3>
+    <form action="/save" method="POST" class="text-center">
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="sexo" class="form-label">Cual es tu sexo</label>
+        <select class="form-select custom-select" id="sexo" name="sexo" required>
+          <option selected></option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="age" class="form-label">Edad:</label>
+        <input type="number" id="age" name="age" class="form-select custom-select" required>
+      </div>
+      
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q1" class="form-label">En situaciones sociales, ¿cómo te describirías?</label>
+        <select class="form-select custom-select" id="q1" name="q1" required>
+          <option selected></option>
+          <option value="5">Muy expresivo/a</option>
+          <option value="4">Bastante expresivo/a</option>
+          <option value="3">A veces expresivo/a</option>
+          <option value="2">Muy reservado/a</option>
+          <option value="1">Raramente muestro emociones o pensamientos en público</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q2" class="form-label">¿Cómo te describirías en términos de tu nivel de actividad en la vida
+          cotidiana?</label>
+        <select class="form-select custom-select" id="q2" name="q2" required>
+          <option selected></option>
+          <option value="5">Muy activo/a</option>
+          <option value="4">Bastante activo/a</option>
+          <option value="3">Moderadamente activo/a</option>
+          <option value="2">Poco activo/a</option>
+          <option value="1">Muy poco activo/a</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q3" class="form-label"> ¿Con qué frecuencia muestras entusiasmo y energía en tus actividades
+          diarias?</label>
+        <select class="form-select custom-select" id="q3" name="q3" required>
+          <option selected></option>
+          <option value="5">Siempre</option>
+          <option value="4">Muy a menudo</option>
+          <option value="3">A veces</option>
+          <option value="2">Raramente</option>
+          <option value="1">Nunca</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q4" class="form-label">¿Sueles tomar la iniciativa en situaciones sociales o actividades en
+          grupo?</label>
+        <select class="form-select custom-select" id="q4" name="q4" required>
+          <option selected></option>
+          <option value="5">Siempre</option>
+          <option value="4">Con frecuencia</option>
+          <option value="3">A veces</option>
+          <option value="2">Raramente</option>
+          <option value="1">Nunca</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q5" class="form-label">¿Con qué frecuencia tiendes a imaginar y crear nuevas ideas o escenarios en
+          tu mente?</label>
+        <select class="form-select custom-select" id="q5" name="q5" required>
+          <option selected></option>
+          <option value="5">Siempre</option>
+          <option value="4">Muy a menudo</option>
+          <option value="3">A veces</option>
+          <option value="2">Raramente</option>
+          <option value="1">Nunca</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q6" class="form-label">¿Sueles aprender mejor a través de la experiencia práctica y la
+          experimentación?</label>
+        <select class="form-select custom-select" id="q6" name="q6" required>
+          <option selected></option>
+          <option value="5">Absolutamente</option>
+          <option value="4">Definitivamente</option>
+          <option value="3">En ocasiones</option>
+          <option value="2">Raramente</option>
+          <option value="1">Casi nunca</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q7" class="form-label">¿Sueles disfrutar explorando conceptos abstractos y teorías en tu
+          pensamiento?</label>
+        <select class="form-select custom-select" id="q7" name="q7" required>
+          <option selected></option>
+          <option value="5">Con mucha frecuencia</option>
+          <option value="4">Frecuentemente</option>
+          <option value="3">Ocasionalmente</option>
+          <option value="2">Pocas veces</option>
+          <option value="1">Casi nunca</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q8" class="form-label">¿Tienes interés en explorar y comprender ideas y teorías en
+          profundidad?</label>
+        <select class="form-select custom-select" id="q8" name="q8" required>
+          <option selected></option>
+          <option value="5">Tengo un gran interés</option>
+          <option value="4">Tengo un interés considerable</option>
+          <option value="3">Tengo un interés ocasional</option>
+          <option value="2">Tengo un interés limitado</option>
+          <option value="1">No tengo interés</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q9" class="form-label">¿Sueles mostrar empatía hacia los sentimientos y necesidades de los
+          demás?</label>
+        <select class="form-select custom-select" id="q9" name="q9" required>
+          <option selected></option>
+          <option value="5">Siempre</option>
+          <option value="4">Con frecuencia</option>
+          <option value="3">A veces</option>
+          <option value="2">Raramente</option>
+          <option value="1">Casi nunca</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q10" class="form-label">¿Con qué frecuencia muestras compasión y preocupación por el bienestar de
+          los demás?</label>
+        <select class="form-select custom-select" id="q10" name="q10" required>
+          <option selected></option>
+          <option value="5">Siempre</option>
+          <option value="4">Con frecuencia</option>
+          <option value="3">A veces</option>
+          <option value="2">Raramente</option>
+          <option value="1">Casi nunca</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q11" class="form-label">¿Sueles ser tolerante y comprensivo/a hacia las diferencias y opiniones de
+          los demás?</label>
+        <select class="form-select custom-select" id="q11" name="q11" required>
+          <option selected></option>
+          <option value="5">Siempre</option>
+          <option value="4">Con frecuencia</option>
+          <option value="3">A veces</option>
+          <option value="2">Raramente</option>
+          <option value="1">Casi nunca</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q12" class="form-label"> ¿Sueles ser complaciente y flexible en tus interacciones con los
+          demás?</label>
+        <select class="form-select custom-select" id="q12" name="q12" required>
+          <option selected></option>
+          <option value="5">Siempre</option>
+          <option value="4">Con frecuencia</option>
+          <option value="3">A veces</option>
+          <option value="2">Raramente</option>
+          <option value="1">Casi nunca</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q13" class="form-label"> ¿Tiendes a planificar tus actividades y compromisos con antelación?</label>
+        <select class="form-select custom-select" id="q13" name="q13" required>
+          <option selected></option>
+          <option value="5">Siempre lo hago</option>
+          <option value="4">Con frecuencia lo hago</option>
+          <option value="3">A veces lo hago</option>
+          <option value="2">Raramente lo hago</option>
+          <option value="1">Casi nunca lo hago</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q14" class="form-label"> ¿Sueles seguir un plan o un horario detallado en tu vida diaria?</label>
+        <select class="form-select custom-select" id="q14" name="q14" required>
+          <option selected></option>
+          <option value="5">Siempre</option>
+          <option value="4">Con frecuencia</option>
+          <option value="3">A veces</option>
+          <option value="2">Raramente</option>
+          <option value="1">Casi nunca</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q15" class="form-label">¿Sueles ser altamente organizado/a y seguir métodos específicos en tu trabajo o actividades diarias?</label>
+        <select class="form-select custom-select" id="q15" name="q15" required>
+          <option selected></option>
+          <option value="5">Siempre</option>
+          <option value="4">Con frecuencia</option>
+          <option value="3">A veces</option>
+          <option value="2">Raramente</option>
+          <option value="1">Casi nunca</option>
+        </select>
+      </div>
+      <div class="mb-3 d-flex flex-column align-items-center">
+        <label for="q16" class="form-label"> ¿Sueles abordar tus tareas y proyectos de manera altamente estructurada y siguiendo un sistema específico?</label>
+        <select class="form-select custom-select" id="q16" name="q16" required>
+          <option selected></option>
+          <option value="5">Siempre</option>
+          <option value="4">Con frecuencia</option>
+          <option value="3">A veces</option>
+          <option value="2">Raramente</option>
+          <option value="1">Casi nunca</option>
+        </select>
+      </div>
+      <!-- Repite este patrón para todas tus preguntas -->
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Enviar respuestas</button>
+      </div>
+    </form>
+  </div>
+
+  </div>
+  </form><br><br>
+
+  <!-- Footer -->
+  <footer class="text-center  colorFoter">
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold"> Alumnos de la UTNG</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
